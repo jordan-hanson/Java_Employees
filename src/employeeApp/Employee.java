@@ -13,7 +13,7 @@ public class Employee {
         //Make Constructor
         //Make Getters and Setters
 
-        //Constructor
+        //Constructor Initiate state from the global variables defined.
         public Employee(String fname, String lname,  double salary,  boolean has401k,  int companyId,  int healthplanId){
             maxId++;
             id = maxId;
@@ -71,6 +71,13 @@ public class Employee {
         };
         public void setCompanyId(int id) {
             this.companyId = id;
+        };
+
+        @Override
+        public String toString(){
+            String rtnStr =
+            "Id: " + id + ", FirstName: " + fname + ", LastName: " + lname + ", Salary: " + salary + ", 401K: " + has401k + ", CompanyId: " + companyId + ", HealthPlanId: " + healthplanId;
+            return rtnStr;
         };
 
 }
