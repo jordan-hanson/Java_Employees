@@ -1,7 +1,7 @@
 package employeeApp;
 
 public class Employee {
-    public static void employee(String[] args) {
+        private static int maxId = 0;
         private int id;
         private String fname;
         private String lname;
@@ -10,7 +10,22 @@ public class Employee {
         private int companyId;
         private int healthplanId;
 
-        //Getters and Setters
+        //Make Constructor
+        //Make Getters and Setters
+
+        //Constructor
+        public Employee(String fname, String lname,  double salary,  boolean has401k,  int companyId,  int healthplanId){
+            maxId++;
+            id = maxId;
+            this.fname = fname;
+            this.lname = lname;
+            this.salary = salary;
+            this.has401k = has401k;
+            this.companyId = companyId;
+            this.healthplanId = healthplanId;
+        };
+
+        //Getters
         public int getId() {
             return this.id;
         };
@@ -25,12 +40,37 @@ public class Employee {
         };
         public boolean getHas401k() {
             return this.has401k;
-        }
+        };
         public int getCompanyId() {
             return this.companyId;
-        }
+        };
         public int getHealthplanId() {
             return this.healthplanId;
-        }
-    }
+        };
+
+        //Setters
+        //use Void if no data is returned
+
+        public void setFName(String name) {
+            this.fname = name;
+        };
+        public void setLName(String name) {
+            this.lname = name;
+        };
+        public void setId(int id){
+            this.id = id;
+        };
+        public void setSalary(double salary) {
+            this.salary = salary;
+        };
+        public void setHas401k(boolean amount) {
+            this.has401k = amount;
+        };
+        public void setHealthPlanId(int id) {
+            this.healthplanId = id;
+        };
+        public void setCompanyId(int id) {
+            this.companyId = id;
+        };
+
 }
